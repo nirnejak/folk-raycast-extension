@@ -32,5 +32,8 @@
     "fix-lint": "ray lint --fix",
     "lint": "ray lint",
     "publish": "ray publish"
+  },
+  "volta": {
+    "node": "16.17.0"
   }
 }
