@@ -1,37 +1,30 @@
-import { ActionPanel, Detail, List, Action } from "@raycast/api";
+import { ActionPanel, List, Action } from "@raycast/api";
 
-const ContactList = () => {
+import { contacts, groups } from "../data";
+
+import ContactList from "./ContactList";
+
+const GroupList = () => {
   return (
     <List>
-      <List.Item
-        icon="list-icon.png"
-        title="Drug Dealers"
-        actions={
-          <ActionPanel>
-            <Action.Push title="Show Contacts" target={<Detail markdown="# Hey! 👋" />} />
-          </ActionPanel>
-        }
-      />
-      <List.Item
-        icon="list-icon.png"
-        title="Movers"
-        actions={
-          <ActionPanel>
-            <Action.Push title="Show Contacts" target={<Detail markdown="# Hey! 👋" />} />
-          </ActionPanel>
-        }
-      />
-      <List.Item
-        icon="list-icon.png"
-        title="Pick Pockets"
-        actions={
-          <ActionPanel>
-            <Action.Push title="Show Contacts" target={<Detail markdown="# Hey! 👋" />} />
-          </ActionPanel>
-        }
-      />
+      {groups.map((group) => (
+        <List.Item
+          icon="list-icon.png"
+          key={group.id}
+          title={group.name}
+          actions={
+            <ActionPanel>
+              <Action.Push
+                title="Show Contacts"
+                target={<ContactList contacts={contacts.filter((contact) => contact.group === group.id)} />}
+              />
+            </ActionPanel>
+          }
+          subtitle={`${group.members} Members`}
+        />
+      ))}
     </List>
   );
 };
 
-export default ContactList;
+export default GroupList;
