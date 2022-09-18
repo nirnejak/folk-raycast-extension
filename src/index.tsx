@@ -1,5 +1,7 @@
 import { ActionPanel, List, Action } from "@raycast/api";
 
+import { contacts } from "./data";
+
 import ContactList from "./components/ContactList";
 import GroupList from "./components/GroupList";
 import SearchResults from "./components/SearchResults";
@@ -13,7 +15,7 @@ export default function Command() {
         title="Search"
         actions={
           <ActionPanel>
-            <Action.Push title="Search Contacts and Groups" target={<SearchResults />} />
+            <Action.Push title="Search" target={<SearchResults />} />
           </ActionPanel>
         }
       />
@@ -22,16 +24,7 @@ export default function Command() {
         title="Contacts"
         actions={
           <ActionPanel>
-            <Action.Push title="List Contacts" target={<ContactList />} />
-          </ActionPanel>
-        }
-      />
-      <List.Item
-        icon="list-icon.png"
-        title="Organizations"
-        actions={
-          <ActionPanel>
-            <Action.Push title="List Organizations" target={<GroupList />} />
+            <Action.Push title="List Contacts" target={<ContactList contacts={contacts} />} />
           </ActionPanel>
         }
       />
@@ -40,7 +33,16 @@ export default function Command() {
         title="Groups"
         actions={
           <ActionPanel>
-            <Action.Push title="List Groups" target={<OrganizationList />} />
+            <Action.Push title="List Groups" target={<GroupList />} />
+          </ActionPanel>
+        }
+      />
+      <List.Item
+        icon="list-icon.png"
+        title="Organizations"
+        actions={
+          <ActionPanel>
+            <Action.Push title="List Organizations" target={<OrganizationList />} />
           </ActionPanel>
         }
       />
