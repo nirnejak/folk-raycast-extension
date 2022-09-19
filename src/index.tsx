@@ -2,10 +2,10 @@ import { ActionPanel, List, Action } from "@raycast/api";
 
 import { contacts } from "./data";
 
+import SearchResults from "./components/SearchResults";
 import ContactList from "./components/ContactList";
 import GroupList from "./components/GroupList";
-import SearchResults from "./components/SearchResults";
-import OrganizationList from "./components/SearchResults";
+import OrganizationList from "./components/OrganizationList";
 
 export default function Command() {
   return (

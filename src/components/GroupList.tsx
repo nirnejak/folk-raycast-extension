@@ -12,6 +12,7 @@ const GroupList = () => {
           icon="list-icon.png"
           key={group.id}
           title={group.name}
+          subtitle={`${group.members} Members`}
           actions={
             <ActionPanel>
               <Action.Push
@@ -20,7 +21,6 @@ const GroupList = () => {
               />
             </ActionPanel>
           }
-          subtitle={`${group.members} Members`}
         />
       ))}
     </List>

@@ -90,3 +90,32 @@ export const groups: GroupType[] = [
     members: 1,
   },
 ];
+
+export type OrganizationType = {
+  id: number;
+  name: string;
+  members: number;
+};
+
+export const organizations = [
+  {
+    id: 1,
+    name: "Los Pollos Hermanos",
+    members: 5,
+  },
+  {
+    id: 2,
+    name: "Los Pollos Hermanos",
+    members: 5,
+  },
+  {
+    id: 3,
+    name: "Los Pollos Hermanos",
+    members: 5,
+  },
+  {
+    id: 4,
+    name: "Los Pollos Hermanos",
+    members: 5,
+  },
+];
