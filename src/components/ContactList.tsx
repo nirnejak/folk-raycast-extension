@@ -19,7 +19,12 @@ const ContactList: React.FC<Props> = ({ contacts }) => {
   return (
     <List>
       {contacts.map((contact) => (
-        <List.Item icon="list-icon.png" title={contact.name} actions={<ContactActions contact={contact} />} />
+        <List.Item
+          key={contact.id}
+          icon="list-icon.png"
+          title={contact.name}
+          actions={<ContactActions contact={contact} />}
+        />
       ))}
     </List>
   );

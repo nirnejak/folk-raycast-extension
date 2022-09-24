@@ -43,19 +43,19 @@ export const contacts: ContactType[] = [
     group: 3,
   },
   {
-    id: 6,
+    id: 7,
     name: "Mike Ehrmantraut",
     email: "mike.ehrmantraut@gmail.com",
     group: 3,
   },
   {
-    id: 7,
+    id: 8,
     name: "Tuco Salamanca",
     email: "tuco.salamanca@hotmai.com",
     group: 2,
   },
   {
-    id: 8,
+    id: 9,
     name: "Hector Salamanca",
     email: "hector.salamanca@hotmai.com",
     group: 2,
