@@ -11,7 +11,7 @@ export default function Command() {
   return (
     <List>
       <List.Item
-        icon="list-icon.png"
+        icon="logo.svg"
         title="Search"
         actions={
           <ActionPanel>
@@ -20,7 +20,16 @@ export default function Command() {
         }
       />
       <List.Item
-        icon="list-icon.png"
+        icon="logo.svg"
+        title="Add Contact"
+        actions={
+          <ActionPanel>
+            <Action.Push title="Search" target={<SearchResults />} />
+          </ActionPanel>
+        }
+      />
+      <List.Item
+        icon="logo.svg"
         title="Contacts"
         actions={
           <ActionPanel>
@@ -29,7 +38,7 @@ export default function Command() {
         }
       />
       <List.Item
-        icon="list-icon.png"
+        icon="logo.svg"
         title="Groups"
         actions={
           <ActionPanel>
@@ -38,7 +47,7 @@ export default function Command() {
         }
       />
       <List.Item
-        icon="list-icon.png"
+        icon="logo.svg"
         title="Organizations"
         actions={
           <ActionPanel>

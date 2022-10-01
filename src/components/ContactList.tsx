@@ -21,7 +21,7 @@ const ContactList: React.FC<Props> = ({ contacts }) => {
       {contacts.map((contact) => (
         <List.Item
           key={contact.id}
-          icon="list-icon.png"
+          icon="logo.svg"
           title={contact.name}
           actions={<ContactActions contact={contact} />}
         />

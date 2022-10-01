@@ -20,7 +20,7 @@ const OrganizationList = () => {
       {organizations.map((organization) => (
         <List.Item
           key={organization.id}
-          icon="list-icon.png"
+          icon="logo.svg"
           title={organization.name}
           subtitle={`${organization.members} Members`}
           actions={<OrganizationActions organization={organization} />}

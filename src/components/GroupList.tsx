@@ -9,7 +9,7 @@ const GroupList = () => {
     <List>
       {groups.map((group) => (
         <List.Item
-          icon="list-icon.png"
+          icon="logo.svg"
           key={group.id}
           title={group.name}
           subtitle={`${group.members} Members`}

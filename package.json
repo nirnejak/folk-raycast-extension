@@ -3,7 +3,7 @@
   "name": "folk",
   "title": "folk",
   "description": "Folk.app Raycast Extension",
-  "icon": "command-icon.png",
+  "icon": "logo.svg",
   "author": "nirnejak",
   "license": "MIT",
   "commands": [
