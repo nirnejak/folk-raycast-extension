@@ -30,6 +30,15 @@ export default function Command() {
       />
       <List.Item
         icon="logo.svg"
+        title="Import Contact"
+        actions={
+          <ActionPanel>
+            <Action.Push title="Search" target={<SearchResults />} />
+          </ActionPanel>
+        }
+      />
+      <List.Item
+        icon="logo.svg"
         title="Contacts"
         actions={
           <ActionPanel>
